@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavBar</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: rgb(37, 37, 37);
+        }
+
+        ul{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgb(46, 46, 46);
+            width: 500px;
+            height: 70px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+            display: flex;
+        }
+
+        ul li{
+            line-height: 70px;
+            width: 100px;
+            color: #fff;
+            text-transform: capitalize;
+            font-family: Arial, Helvetica, sans-serif;
+            list-style: none;
+            text-align: center;
+            font-size: 20px;
+            transition: .3s;
+            cursor: pointer;
+
+
+        }
+
+        li:hover,active{
+            color: rgb(9, 175, 134);
+            
+        }
+
+        .bottom{
+            position: absolute;
+            width: 80px;
+            height: 6px;
+            background-color: rgb(251, 255, 6);
+            bottom: 0%;
+            left: 10px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            transition: .3s;
+
+
+        }
+li:nth-child(2):hover ~ .bottom{
+    left: 110px;}
+li:nth-child(3):hover ~ .bottom{
+    left: 210px;}
+li:nth-child(4):hover ~ .bottom{
+    left: 310px;}
+li:nth-child(5):hover ~ .bottom{
+    left: 410px;
+
+}
+    </style>
+
+</head>
+<body>
+    <ul>
+        <li id="active">Home</li>
+        <li>About</li>
+        <li>Work</li>
+        <li>Help</li>
+        <li>About</li>
+        <div class="bottom"></div>
+    </ul>
+</body>
+</html>
